@@ -140,7 +140,7 @@ export class Client extends EventEmitter {
     setSOAPAction(action: string): void;
     setSecurity(security: ISecurity): void;
     wsdl: WSDL;
-    [method: string]: ISoapMethod | WSDL | Function;
+    [method: string]: any;
 }
 
 export function createClient(url: string, callback: (err: any, client: Client) => void): void;
